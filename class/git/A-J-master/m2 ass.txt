@@ -1,0 +1,123 @@
+m2 ass..
+
+ui package.......
+package com.capgemini.emp.ui;
+import com.capgemini.emp.bean.*;
+import java.util.*;
+
+public class Client {
+	byte option;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		Employee E=new Employee();
+		
+		System.out.println("Available Options");
+		System.out.println("1.Enter Employee Details\n2. Exit");
+		
+		byte option = sc.nextByte();
+		
+		if(option==1){
+			System.out.println("1.Enter Employee Details");
+			E.setEmployeeD();
+			E.getEmployeeD();
+			
+		}
+		else if(option==2)
+			System.out.println("2.Exit");
+		else System.out.println("Wrong Choice! Try Again");
+
+	}
+
+}
+.......................
+
+
+bean package...........
+package com.capgemini.emp.bean;
+
+import com.capgemini.emp.ui.*;
+import java.util.regex.*;
+import java.util.*; 
+
+
+public class Employee {
+	private static int ID;
+	private static String Name;
+	private static long Number;
+	public static String ERole;
+	public static double Salary;
+	private static String Email;
+	public static double TA;
+	
+	
+	public static void setEmployeeD() 
+    { 
+    	Scanner sc = new Scanner(System.in); 
+   	
+    	System.out.println("Enter the name of the Employee: ");
+        Name = sc.nextLine();     
+
+        System.out.println("Enter Employee phone number: ");
+        Number = sc.nextLong(); 
+
+        System.out.println("Enter the Employee Role: ");
+        ERole = sc.next(); 
+
+        System.out.println("Enter the Salary: ");
+        Salary = sc.nextDouble(); 
+
+        System.out.println("Enter the Email ID: ");
+        Email = sc.next(); 
+    }
+	
+	public static void getEmployeeD()    { 
+        Random random=new Random();
+        ID=random.nextInt(10000);
+        
+        System.out.println("Employee has been successfully Register along with the "+ID);
+        System.out.println("Name of the Employee: "+Name);
+        System.out.println("Employee Phone Number: "+Number);
+        System.out.println("Employee Role: "+ERole);
+        System.out.println("Salary: "+Salary);
+        System.out.println("Email ID: "+Email);
+
+}
+}
+.......................................
+dao pack
+
+package com.capgemini.emp.dao;
+import com.capgemini.emp.bean.*;
+import com.capgemini.emp.ui.*;
+
+public class EmployeeDao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		if(Employee.ERole.equals("SeniorManager"))
+		{
+			Employee.TA=0.25*(Employee.Salary);
+		}
+		else if(Employee.ERole.equals("Manager"))
+		{
+			Employee.TA=0.20*(Employee.Salary);
+		}
+		else if(Employee.ERole.equals("SeniorConsultant"))
+		{
+			Employee.TA=0.15*(Employee.Salary);
+		}
+		else if(Employee.ERole.equals("Consultant"))
+		{
+			Employee.TA=0.10*(Employee.Salary);
+		}
+		else
+		{
+			System.out.println("Inavlid entry!");	
+		}
+		System.out.println("Travel allowance is:"+Employee.TA);
+		}
+}
+...................................

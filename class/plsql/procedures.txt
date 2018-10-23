@@ -1,0 +1,70 @@
+create or replace procedure print_hello is
+	msg varchar2(30) := 'hello good morning';
+begin
+	dbms_output.put_line(msg);
+end;
+/
+-->exec print_hello;	// to execute procedure
+
+create or replace procedure print_name_sal(id number)is
+	name emp.ename%type;
+	esal emp.sal%type;
+begin
+	select ename, sal into name, esal from emp where empno=id;
+	dbms_output.put_line(name|| '' ||esal);
+end;
+/
+-->show errors;	// to see code errors
+-->exec print_name_sal(----);
+
+create or replace procedure print_emp(id IN number, name OUT varchar2)is	//IN to pass input, OUT to display output
+begin
+	select ename into name from emp where empno=id;
+	dbms_output.put_line('hello' ||name);
+end;
+/
+-->declare	//to execute the dual parameterised procedure
+empname emp.ename%type;
+begin
+	print_emp(7534,empname);
+	dbms_output.put_line('hello'||empname);
+end;
+/
+
+__hello	//single line comment
+/*---*/ // multi line comment
+INOUT dual parameters also used
+
+begin
+	print_hello;
+end;	//execution without parameters
+
+create or replace procedure print_vote is
+	age number(5) := &age;
+begin
+	if age>=18 then
+	dbms_output.put_line('registered');
+	else 
+	dbms_output.put_line('try later');
+	end if;
+end;
+/
+
+//with IN parameter
+create or replace procedure print_vote(age IN number) is
+begin
+	if age>=18 then
+	dbms_output.put_line(age || ' years, already registered or get now');
+	else 
+	dbms_output.put_line(age ||' not eligible try after '||(18-age)|| ' years');
+	end if;
+end;
+/
+
+declare
+age number(5);
+begin
+	print_vote(20);
+	print_vote(12);
+end;
+/

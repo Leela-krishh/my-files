@@ -1,0 +1,52 @@
+1: declare an exception
+	invalid_age_exception exception;
+	
+2: raise an exception
+	if age<18 then
+		raise invalid_age_exception;
+		
+3: handle raised exception
+	when invalid age_exception then
+	dbms_output/put_line('try after ' || (18-age) || 'years');
+
+create or replace procedure print_vote(age IN number) is
+	invalid_age_exception exception;
+begin
+	if age<=18 then
+		raise invalid_age_exception;
+	else
+	dbms_output.put_line(age || 'is registered');
+	end if;
+exception
+	when invalid_age_exception then
+		dbms_output.put_line(age ||' not eligible try after '||(18-age)|| ' years');
+end;
+/
+
+declare
+age number(5);
+begin
+	print_vote(20);
+	print_vote(12);
+end;
+/
+
+create or replace procedure print_emp_sal is
+esal number(9,2);
+begin
+	select sal into esal from emp where empno=123;	// not valid empno.. "no data found" a predefined exception occurs
+	dbms_output.put_line('salary: '||esal);
+end;
+/
+
+handling predefined exception
+>>create or replace procedure print_emp_sal is	// (id number) is
+esal number(5);
+begin
+	select sal into esal from emp where empno=123;	//empno=id;
+	dbms_output.put_line('salary: '||esal);
+exception
+	when no_data_found then
+		dbms_output.put_line('no data for '|| 123);	//(|| id);
+end;
+/

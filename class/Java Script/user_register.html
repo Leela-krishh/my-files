@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>registration</title>
+<script src="user_register.js"></script>
+</head>
+<body>
+<table>
+<form>
+<tr><td>Username:</td>
+<td><input type="text" name="username" id="user" required/></td><td><span id="uerror"></span></td></tr>
+<tr><td>Email:</td>
+<td><input type="email" name="email" id="email" required/></td><td><span id="eerror"></span></td></tr>
+<tr><td>Password:</td>
+<td><input type="password" name="password" id="pass" required/></td><td><span id="perror"></span></td></tr>
+<tr><td>Confirm Password:</td>
+<td><input type="password" name="password" id="cpass" required/></td><td><span id="cperror"></span></td></tr>
+<tr><td>Mobile</td>
+<td><input type="text" name="Mobile" id="mobile" required/></td><td><span id="merror"></span></td></tr>
+<tr><td>aadhar number:</td>
+<td><input type="aadhar" name="aadhar" id="aadhar" required/></td><td><span id="aerror"></span></td></tr>
+<tr><td><button onclick="return validate()">Register</button></td><td></td></tr>
+</form></table>
+</body>
+</html>

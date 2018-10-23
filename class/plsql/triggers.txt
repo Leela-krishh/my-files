@@ -1,0 +1,15 @@
+create or replace procedure add_age is
+begin
+	execute immediate 'alter table emp add age number(5)';	//ddl to be declared in this manner
+end;
+/
+
+create table salary_history(id number(5), name varchar2(20), prev_sal number(9,2),new_sal number(9,2));
+
+create or replace trigger salary_trigger
+before update of sal on emp
+for each row
+begin
+	insert into salary_history values(:old.empno,:old.ename,:old.sal,:new.sal);
+end;
+/

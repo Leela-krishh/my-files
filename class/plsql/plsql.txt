@@ -1,0 +1,231 @@
+declare
+	name varchar2(30);
+begin
+	dbms_output.put_line('hello world');
+end;
+/
+
+declare
+	name varchar2(30);
+begin
+	select ename into name from emp where empno=7934;
+	dbms_output.put_line('hello mr.'|| name);
+end;
+/
+
+declare
+	name varchar2(30);
+	id number(3);
+	esal number(9,2);
+begin
+	select empno, ename, sal into id, name, esal from emp where empno=7934;
+	dbms_output.put_line('employee name is Mr.'|| name || ' with id ' || id || ' having salary ' || esal);
+end;
+/
+
+declare
+	name emp.ename%TYPE;
+	id emp.empno%TYPE;
+	esal emp.sal%TYPE;
+begin
+	select empno, ename, sal into id, name, esal from emp where empno=7934;
+	dbms_output.put_line('employee name is Mr.'|| name || ' with id ' || id || ' having salary ' || esal);
+end;
+/
+
+declare 
+	name emp.ename%TYPE;
+	salary emp.sal%TYPE;
+begin
+	select ename, sal into name, salary from emp where empno=7534;
+	dbms_output.put_line('employee name is Mr.'|| name || ' having salary ' || salary);
+end;
+/
+
+If condition THEN
+	statements;
+END IF;
+
+declare
+	num number(5) := 10;	//initialisation
+begin
+if num!=0 then
+	dbms_output.put_line('positive number');
+end if;
+end;
+/
+
+declare
+	num number(5) := -2;
+begin
+if mod(num,2)=0 then
+	dbms_output.put_line('even number');
+else
+	dbms_output.put_line('odd number');
+end if;
+end;
+/
+
+declare
+	num number(5) := 9;
+begin
+if mod(num,2)= 0 then
+	dbms_output.put_line('even number');
+elsif mod(num,2)!=0 then
+	dbms_output.put_line('odd number');
+else
+	dbms_output.put_line('invaid number');
+end if;
+end;
+/
+
+declare
+	marks number(5):= 50;
+begin
+if marks<=100 and marks>=90 then
+	dbms_output.put_line('Grade A');
+elsif marks<90 and marks>=80 then
+	dbms_output.put_line('Grade B');
+elsif marks<80 and marks>=70 then
+	dbms_output.put_line('Grade C');
+elsif marks<70 and marks>=60 then
+	dbms_output.put_line('Grade D');
+else
+	dbms_output.put_line('not qualified');
+end if;
+end;
+/
+
+declare
+	marks number(5):=60;
+begin 
+Case
+when marks<=100 and marks>=90 then
+	dbms_output.put_line('Grade A');
+when marks<90 and marks>=80 then
+	dbms_output.put_line('Grade B');
+when marks<80 and marks>=70 then
+	dbms_output.put_line('Grade C');
+when marks<70 and marks>=60 then
+	dbms_output.put_line('Grade D');
+when marks<=60 then	// else
+	dbms_output.put_line('not qualified');
+end case;
+end;
+/
+
+declare
+	month varchar2(10):='jun';
+begin 
+Case
+when month='jan' then
+	dbms_output.put_line('number of days is 31');
+when month='feb' then
+	dbms_output.put_line('number of days is 28');
+when month='mar' then
+	dbms_output.put_line('number of days is 31');
+when month='apr' then
+	dbms_output.put_line('number of days is 30');
+when month='may' then
+	dbms_output.put_line('number of days is 31');
+when month='jun' then
+	dbms_output.put_line('number of days is 30');
+when month='jul' then
+	dbms_output.put_line('number of days is 31');
+when month='aug' then
+	dbms_output.put_line('number of days is 31');
+when month='sep' then
+	dbms_output.put_line('number of days is 30');
+when month='oct' then
+	dbms_output.put_line('number of days is 31');
+when month='nov' then
+	dbms_output.put_line('number of days is 30');
+when month='dec' then
+	dbms_output.put_line('number of days is 31');
+else
+	dbms_output.put_line('invalid month');
+end case;
+end;
+/
+
+declare
+	num number(5) := &num;
+begin
+if mod(num,2)= 0 then
+	dbms_output.put_line('even number');
+elsif mod(num,2)!=0 then
+	dbms_output.put_line('odd number');
+else
+	dbms_output.put_line('invaid number');
+end if;
+end;
+/
+
+loop
+	statement1;
+end loop;
+
+>>declare
+	num number(5):=&num;
+begin 
+	loop
+		dbms_output.put_line(num);
+		num :=num+1;
+		Exit when num=100;
+	end loop;
+end;
+/
+
+while condition loop
+	statement;
+end loop;
+
+>>declare
+	num number(5):=&num;
+begin 
+	while num<=20 loop
+		dbms_output.put_line(num);
+		num :=num+1;
+	end loop;
+end;
+/
+
+for index_var in lower..upper loop
+	statement;
+end loop;
+
+>>begin
+	for num in 1..10 loop		//declare not req, as for loop has lower and upper bound values
+		dbms_output.put_line(num+2);
+	end loop;
+end;
+/
+
+begin
+	for num in reverse 1..10 loop
+		dbms_output.put_line(num);
+	end loop;
+end;
+/
+
+begin
+	for num in 1..4 loop
+	for val in 1..4 loop
+	if num<=val then
+	dbms_output.put('* ');
+	end if;
+	end loop;
+	dbms_output.put_line('');
+	end loop;
+end;
+/
+
+begin
+	for num in 1..4 loop
+	for val in 1..4 loop
+	dbms_output.put('* ');
+	end loop;
+	dbms_output.put_line('');
+	end loop;
+end;
+/

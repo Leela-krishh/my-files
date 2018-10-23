@@ -1,0 +1,31 @@
+function returns a data or value where as procedures do not
+
+create or replace function print_msg return varchar2 is
+begin
+	return 'hello';
+end;
+/
+
+declare
+	msg varchar2(30);
+begin
+	msg:=print_msg;
+	dbms_output.put_line(msg);
+end;
+/	//for execution of a function
+
+create or replace function print_empl(id IN number, esal OUT number) return number is
+begin
+	select sal into esal from emp where empno=id;
+	dbms_output.put_line('sal is'|| esal);
+	return esal;
+end;
+/
+
+declare
+esal emp.sal%type;
+begin
+	esal := print_empl(7534,esal);
+	dbms_output.put_line('sal is'||esal);
+end;
+/
