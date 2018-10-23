@@ -1,0 +1,169 @@
+create table dept( 
+  deptno     number(2,0), 
+  dname      varchar2(14), 
+  loc        varchar2(13), 
+  constraint pk_dept primary key (deptno) 
+)
+ 
+create table emp( 
+  empno    number(4,0), 
+  ename    varchar2(10), 
+  job      varchar2(9), 
+  hiredate date, 
+  sal      number(7,2), 
+  deptno   number(2,0), 
+  constraint pk_emp primary key (empno), 
+  constraint fk_deptno foreign key (deptno) references dept (deptno) 
+)
+ 
+Department:
+-----------
+insert into DEPT (DEPTNO, DNAME, LOC)
+values(10, 'ACCOUNTING', 'NEW YORK')
+ 
+insert into dept 
+values(20, 'RESEARCH', 'DALLAS')
+ 
+insert into dept 
+values(30, 'SALES', 'CHICAGO')
+ 
+insert into dept 
+values(40, 'OPERATIONS', 'BOSTON')
+ 
+ 
+Emp:
+----
+insert into emp 
+values( 
+ 7839, 'KING', 'PRESIDENT', 
+ to_date('17-11-1981','dd-mm-yyyy'), 
+ 5000, 10 
+);
+ 
+insert into emp 
+values( 
+ 7698, 'BLAKE', 'MANAGER',  
+ to_date('1-5-1981','dd-mm-yyyy'), 
+ 2850, 30 
+);
+ 
+ 
+insert into emp 
+values( 
+ 7782, 'CLARK', 'MANAGER', 
+ to_date('9-6-1981','dd-mm-yyyy'), 
+ 2450, 10 
+);
+ 
+ 
+insert into emp 
+values( 
+ 7566, 'JONES', 'MANAGER',  
+ to_date('2-4-1981','dd-mm-yyyy'), 
+ 2975, 20 
+);
+ 
+ 
+insert into emp 
+values( 
+ 7788, 'SCOTT', 'ANALYST',  
+ to_date('13-JUL-87','dd-mm-rr') - 85, 
+ 3000, 20 
+);
+ 
+insert into emp 
+values( 
+ 7902, 'FORD', 'ANALYST',  
+ to_date('3-12-1981','dd-mm-yyyy'), 
+ 3000, 20 
+);
+ 
+ 
+insert into emp 
+values( 
+ 7369, 'SMITH', 'CLERK',
+ to_date('17-12-1980','dd-mm-yyyy'), 
+ 800, 20 
+);
+ 
+insert into emp 
+values( 
+ 7499, 'ALLEN', 'SALESMAN', 
+ to_date('20-2-1981','dd-mm-yyyy'), 
+ 1600, 30 
+);
+ 
+insert into emp 
+values( 
+ 7521, 'WARD', 'SALESMAN',
+to_date('22-2-1981','dd-mm-yyyy'), 
+ 1250, 30 
+);
+ 
+insert into emp 
+values( 
+ 7654, 'MARTIN', 'SALESMAN',
+to_date('28-9-1981','dd-mm-yyyy'), 
+ 1250, 30 
+);
+ 
+insert into emp 
+values( 
+ 7844, 'TURNER', 'SALESMAN',
+ to_date('8-9-1981','dd-mm-yyyy'), 
+ 1500, 30 
+);
+ 
+insert into emp 
+values( 
+ 7876, 'ADAMS', 'CLERK',
+to_date('13-JUL-87', 'dd-mm-rr') - 51, 
+ 1100, 20 
+);
+ 
+insert into emp 
+values( 
+ 7900, 'JAMES', 'CLERK',
+ to_date('3-12-1981','dd-mm-yyyy'), 
+ 950, 30 
+);
+ 
+insert into emp 
+values( 
+ 7934, 'MILLER', 'CLERK',
+ to_date('23-1-1982','dd-mm-yyyy'), 
+ 1300, 10 
+);
+ 
+insert into emp 
+values( 
+ 7534, 'ROLLER', 'CLERK',
+ to_date('24-9-85', 'dd-mm-rr'), 
+ 1300, 10 
+);
+
+select deptno, sum(sal) from emp group by(deptno);
+
+select deptno, max(sal) from emp group by(deptno);
+
+select count(empno) from emp group by(deptno);
+
+select deptno, sum(sal) from emp group by(deptno) having sum(sal)>5000;
+
+select deptno, count(deptno) from emp group by(deptno) having count(empno)>2;
+
+select deptno, sal from employee order by sal;
+
+select deptno, sal from employee order by sal desc;
+
+select deptno, sal from employee order by job,sal;
+
+select deptno, sal from employee order by job,sal,hiredate;
+
+select * from emp,dept;
+
+select * from emp e left outer join dept d on e.deptno=d.deptno;
+
+select * from emp e right outer join dept d on e.deptno=d.deptno;
+
+select e1.eid, e1.ename from emp e1, emp e2 where e1.eid=e2.mid;

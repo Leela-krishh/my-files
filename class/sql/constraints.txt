@@ -1,0 +1,59 @@
+create table employee(
+	id number(5) primary key,
+	name varchar2(30),
+	sal number(9,2)
+);
+
+create table employee(
+	id number(5) constraint id_pk primary key,
+	name varchar2(30),
+	sal number(9,2)
+);
+
+alter table employee drop constraint id_pk; //for removing primary key constraint
+
+create table department(
+	id number(5),
+	name varchar2(30),
+	loc varchar2(30),
+	eid number(5) constraint eid_fk references employee(id)
+); //to create table with primary key with constraint so that we can drop
+
+alter table department add constraint did_pk primary key(id); //for adding primary key constraint
+
+create table employee( 
+	id number(5),
+	name varchar2(30),
+	sal number(9,2),
+	constraint id_pk primary key(id)
+);
+
+create table department(
+	id number(5),
+	name varchar2(30),
+	loc varchar2(30),
+	eid number(5) constraint eid_fk references employee(id) on delete cascade
+); //allows to delete dependencies
+
+alter table employee add constraint name_uk unique(name);
+
+create table customer(
+	id number(5),
+	name varchar2(30) not null
+);
+
+alter table employee modify(name varchar2(30) not null);
+
+insert into employee(		);
+
+savepoint a;
+
+insert into employee(		);
+
+savepoint b;
+
+insert into employee(		);
+
+savepoint c;
+
+rollback to a;

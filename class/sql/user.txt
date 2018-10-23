@@ -1,0 +1,13 @@
+create user leela identified by capgemini123;
+
+grant select on department to leela;
+
+revoke select on department from leela;
+
+select max(sal) from employee;
+
+select max(sal) as highest salary from employee;
+
+select count(id),id from department group by id;
+
+select count(*),id from department group by id; //null columns also counted
