@@ -1,0 +1,129 @@
+1) Can insert be used in place of update?
+
+a) True
+b) False
+c) It is replacement of update
+d) None of the above
+
+
+2. Which data type in SQL server can be used to store time in the table?
+
+a)     Timeonly
+b)     OnlyTime
+c)     Time
+d)     DateTime
+
+3. What is the default size of n in a column which is defined as VARCHAR(n)?
+
+a)     NULL
+b)     0
+c)     1
+d)     None of the above
+
+4) Which one is correct syntax for Insert Statement?
+
+a) Insert table_name Columns(Col1, Col2,Col3);
+b) Insert into table_name (Col1, Col2,Col3) VALUES (Val1,Val2,Val3);
+c) Insert Columns(Col1, Col2,Col3) VALUE (Val1, Val2,Val3) Into table_name;
+d) None of the above
+
+5) Update statement is used to insert values in a table and therefore it is a replacement of insert statement, is it correct?
+
+a) True
+b) False
+
+6) Which one is correct syntax for Update Statement?
+
+a) Update Table table_name Columns(Col1, Col2,Col3);
+b) Update into table_name (Col1, Col2,Col3) VALUES (Val1,Val2,Val3);
+c) Update table_name Set Col_name=Value;
+d) None of the above
+
+7) Is mentioning column name corresponding to its value mandatory in Update Statement?
+
+a) True
+b) False
+
+8) What will be the consequence of omitting ‘Where’ clause in Update Statement?
+
+a) No effect on the query as well as on table.
+b) All records present in the table will be updated
+c) Only one record will be updated
+d) None of the above
+
+9) In any case, can update statement be used in place of insert statement?
+
+a) Yes, if record exists with Identity value.
+b) Yes, in every case
+c) No, it is not possible at all.
+d) None of the above.
+
+10) Can we use ‘where’ clause in an Insert statement?
+
+a) True
+b) False
+
+11. Which one is correct syntax for Where clause in SQL server?
+
+a) SELECT WHERE "Condition" Col1, Col2 FROM "Table" ;
+b) SELECT "Condition" Col1, Col2 FROM "Table" WHERE;
+c) SELECT Col1, Col2 FROM "Table" WHERE "condition";
+d) None of the above
+
+12. What can be the condition in where clause in a SQL query?
+
+a) Condition that is to be met for the rows to be returned from result.
+b) Boolean Condition only
+c) Text condition only
+d) None of the above
+
+13. Is there any limit for number of predicates/conditions to be added in a Where clause?
+
+a) True
+b) False
+
+14. Can ‘IN’ operator be used with Where clause?
+
+a) True
+b) False
+
+15) Which category Delete query exits?
+
+a) DDL
+b) DML
+c) TCL
+d) BPL
+
+16) Can we use Where condition in Truncate?
+
+a) True
+b) False
+
+17) Which one is faster to delete a table?
+
+a) Truncate
+b) Delete
+c) Remove
+d) None of the above
+
+18) What is the basic syntax for Delete query?
+
+a) Delete * from tablename;
+b) Delete from tablename;
+c) Delete column1, Column2, column(n) from tablename;
+d) All are correct.
+
+
+19) Which category Delete query exits?
+
+a) DDL
+b) DML
+c) TCL
+d) BPL
+
+20) Which clause in DELETE statement leads to perform delete with certain criteria?
+
+a) Group
+b) Group By
+c) Where
+d) Having

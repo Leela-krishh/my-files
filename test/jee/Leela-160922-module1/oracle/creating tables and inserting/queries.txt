@@ -1,0 +1,14 @@
+
+create table electricityconsumer(consumerno number(8) primary key, consumername varchar2(20) not null, 
+email varchar2(35), unitsconsumed number(10));
+-----------------
+
+insert into table electricityconsumer(&consumerno, '&consumername', '&email', &unitsconsumed');
+-----------------
+
+create table electricitybill(billno number(10) primarykey, consumerno number(10) f_key references electricityconsumer(consumerno),
+billamount number(9,2), billpaiddate date);
+-----------------
+
+insert into table electricitybill(&billno, &consumerno, &billamount, '&date');
+-----------------

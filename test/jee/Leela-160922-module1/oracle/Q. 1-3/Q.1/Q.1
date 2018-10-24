@@ -1,0 +1,22 @@
+CREATE SEQUENCE BillID_Seq START WITH 111;
+-------------
+
+>>>>>>>>
+Q.1
+
+create or replace procedure electricity_bill(id in number) is
+    units electricityconsumer.unitsConsumed%TYPE;
+    electricity_bill number;
+begin
+    select unitsconsumed into units from electricityconsumer where consumerno=id;
+              if units<=100 then
+				electricity_bill := units*2.96;
+              else
+				electricity_bill := units*5.56;
+              end if;
+end;
+/
+
+insert into electricitybill values(billid_Seq.nextval, id, electricity_bill, sysdate);
+
+exec electricity_bill(&consumerno)

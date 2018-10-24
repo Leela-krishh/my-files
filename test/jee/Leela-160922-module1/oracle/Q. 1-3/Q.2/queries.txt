@@ -1,0 +1,13 @@
+
+1.
+select  consumerno, consumername from electricityconsumer where 
+unitsconsumed=(select max(unitsConsumed) from electricityconsumer);
+---------------
+
+2.
+select consumerno from electricitybill group by consumerno having count(consumerno)>1;
+---------------
+
+3.
+select c.consumername from electricityconsumer c, electricitybill b where c.consumerno=b.consumerno 
+and extract(day from b.billpaiddate)>15;

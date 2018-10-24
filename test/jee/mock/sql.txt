@@ -1,0 +1,101 @@
+select consumerno, consumername from electricityconsumer where unitsconsumed=(select max(unitsconsumed) from electricityconsumer);
+
+select consumerno from electricitybill group by consumerno having count(consumerno)>1;
+
+select c.consumername from electricityconsumer c, electricitybill b where c.consumerno=b.consumerno 
+and extract(day from b.billpaiddate)>15;
+---------------------------------
+CREATE SEQUENCE BillID_Seq START WITH 111; 
+  
+Q1:
+----
+ 
+create or replace procedure cal_ebill(cno in number) is
+              units electricity_consumer.unitsConsumed%TYPE;
+              ebill number;
+begin
+              select unitsConsumed into units from electricity_consumer where consumerNo=cno;
+              IF units <= 100 THEN
+                             ebill := units * 2.96;
+              ELSE
+                             ebill := units * 5.56;
+              END IF;
+              insert into electricity_bill values(BillID_Seq.nextval, cno, ebill, sysdate);
+end;
+/
+ 
+exec cal_ebill(&consno)
+ 
+ 
+Q2:
+====
+1. select consumerName, consumerNo from electricity_consumer where unitsConsumed in (select max(unitsConsumed) from electricity_consumer);
+ 
+2. select consumerno, count(*) from electricity_bill group by consumerno having count(*) >= 2;
+ 
+3. select consumername from electricity_consumer where consumerno in (select consumerno from electricity_bill where extract(day from billPaidDate)>= 16);
+             
+ 
+Q3:
+===
+ 
+alter table electricity_consumer add billPaymentDate date;
+alter table electricity_consumer add billPaymentDueDate date;
+alter table electricity_consumer add constraint bpdd_ck check  billPaymentDueDate between billPaymentDate and (billPaymentDate)+7);
+---------------------------------------------
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>htmljs</title>
+        <script src="section_1_HTML_JS.js"></script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr><td>Consumer No: </td><td><input type="number" maxlength="8" min="0" max="99999999" id="cno" name="cno" required/></td></tr>
+                <tr><td>Consumer Name: </td><td><input type="text" name="cname" id="cname" minlength="3" required style="text-transform:capitalize"/></td></tr>
+                <tr><td>Email Address: </td><td><input type="email" name="mail" id="mail" required/></td></tr>
+                <tr><td>Number Of Units: </td><td><input type="number" name="nou" id="nou" required/></td></tr>
+                <tr><td colspan="2"><button onclick="return calculateElectriciyCharges()">Calculate</button></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
+ 
+ 
+Section_1_HTML_JS.js:
+------------------------------
+ 
+function calculateElectriciyCharges() {
+    var consumer_no = document.getElementById('cno').value;
+    var consumer_name = document.getElementById('cname').value;
+    var email_addr = document.getElementById('mail').value;
+    var Number_of_units = document.getElementById('nou').value;
+    var ebill;
+    if (consumer_no.length == 8) {
+        if (consumer_name.length >= 3) {
+            var mail_reg = /^[a-zA-Z0-9.]+[@][a-zA-Z]+[.][a-zA-Z]+$/;
+            if (email_addr.match(mail_reg)) {
+                if (Number_of_units.length > 0) {
+                    if (Number_of_units <= 100) {
+                        ebill = Number_of_units * 2.96;
+                    } else {
+                        ebill = Number_of_units * 5.56;
+                    }
+                    alert(consumer_no + " "  + consumer_name + " " + email_addr + " " + Number_of_units + " " + ebill);
+                    return true;
+                } else {
+                    alert('enter number of units')
+                }
+            } else {
+                alert("invalid email id")
+            }
+        } else {
+            alert('consumer name must be min 3 charaters in length')
+        }
+    } else {
+        alert('consumer number should be 8 digits')
+    }
+    
+    return false;
+}

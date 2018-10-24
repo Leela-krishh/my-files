@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Electricity_consumer>
+<consumer>
+<consumerNo>1001</consumerNo>
+<consumername>Seema Joshi</consumername>
+<email>Seema.joshi@gmail.com</email>
+<unitsconsumed>250</unitsconsumed>
+</consumer>
+<consumer>
+<consumerNo>1002</consumerNo>
+<consumername>Amey Joshi</consumername>
+<email>Amey.joshi@cg.com</email>
+<unitsconsumed>345</unitsconsumed>
+</consumer>
+<consumer>
+<consumerNo>1003</consumerNo>
+<consumername>Pravin</consumername>
+<email>Pravin.t@cg.com</email>
+<unitsconsumed>457</unitsconsumed>
+</consumer>
+<consumer>
+<consumerNo>1004</consumerNo>
+<consumername>Manoj Kulkarni</consumername>
+<email>manoj@gmail.com</email>
+<unitsconsumed>780</unitsconsumed>
+</consumer>
+<consumer>
+<consumerNo>1005</consumerNo>
+<consumername>Shrikant Shinde</consumername>
+<email>Shrikant.shinde@gmail.com</email>
+<unitsconsumed>90</unitsconsumed>
+</consumer>
+<consumer>
+<consumerNo>1006</consumerNo>
+<consumername>Mahesh B</consumername>
+<email>bMahesh@yahoo.com</email>
+<unitsconsumed>720</unitsconsumed>
+</consumer>
+</Electricity_consumer>

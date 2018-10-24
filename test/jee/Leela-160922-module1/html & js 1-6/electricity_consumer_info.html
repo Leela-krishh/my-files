@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="electricity_consumer_info.js"></script>
+        <title>Electricity Consumer Info</title>
+    </head>
+<body>
+    <table border="1">
+        <tr><td><br><br>
+            <table cellpadding="5">
+            <form>
+            <tr><td>
+                <tr><td></td></tr>
+
+                <tr><td></td></tr>
+
+                <caption><b>Electricity Consumer Form</b></caption>
+
+                <tr><td>Consumer No:</td>
+                    <td><input type="number" id="num" name="num" maxlength="8" required/></td></td><td><span id="nerror"></span></tr>
+
+                <tr><td>Consumer Name:</td>
+                    <td><input type="text" id="name" name="name" style="text-transform: capitalize;" minlength="3" required/></td></td><td><span id="merror"></span></tr>
+
+                <tr><td>Email Address:</td>
+                    <td><input type="Email" id="email" name="email" required/></td></td><td><span id="eerror"></span></tr>
+
+                <tr><td>Number of Units:</td>
+                    <td><input type="number" id="units" name="units" required/></td></td><td><span id="uerror"></span></tr>
+
+                <tr><td></td></tr>
+
+                <tr><td></td></tr>
+
+                <tr><td colspan="2" align="center"><button onclick="return calculate_bill()">Calculate Electricity Charges and Display</button></td></tr>
+
+                <tr><td></td></tr>
+            </form>
+    </table>
+</table>
+</body>
+</html>

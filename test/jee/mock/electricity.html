@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Electricity</title>
+       <script src="electricity.js"></script>
+    </head>
+    <body>
+            
+        <table border="1">
+            <tr><td>
+                <table cellpadding="5">
+                       <caption>Electricity Consumer Form</caption><br>
+            <form>
+            <tr><td><br>Consumer Number:</td>
+                <td><br><input type="number" name="num" id="num" required/></td><td><span id="nerror"></span></td></tr>
+            <tr><td>Consumer Name:</td>
+                <td><input  style="text-transform: capitalize;" type="text" name="name" id="name" required/></td><td><span id="merror"></span></td></tr>
+            <tr><td>Email:</td>
+                   <td><input type="email" name="email" id="email" required/></td><td><span id="eerror"></span></td></tr>
+            <tr><td>Number of Units:</td>
+                   <td><input type="number" name="units" id="units" required/></td><td><span id="uerror"></span></td></tr>    
+            </form>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+            <tr><td colspan="2" align="center"><button onclick="return calculate()">Calculate the electricity charges and display</button></td></tr>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+            </table>
+        </td></tr>
+        </table><br>
+    </body>
+</html>

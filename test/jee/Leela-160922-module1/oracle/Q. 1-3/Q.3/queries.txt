@@ -1,0 +1,10 @@
+
+alter table electricityconsumer add billPaymentDate date;
+-------------
+
+alter table electricityconsumer add billPaymentDueDate date;
+-------------
+
+alter table electricityconsumer add constraint duedate check  
+billPaymentDueDate between billPaymentDate and (billPaymentDate)+7;
+-------------

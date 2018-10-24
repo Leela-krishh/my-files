@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="https://www.w3.org/2001/xmlschema" 
+targetnamespace="http://www.capgemini.com" xmlns="http://www.capgemini.com" elementfromdefault="qualified">
+<xs:element name="consumer">
+<xs:complextype>
+<xs:sequence>
+<xs:element name="consumerno" type="xs:number"/>
+<xs:element name="consumername" type="xs:string"/>
+<xs:element name="emailid" type="xs:string"/>
+<xs:element name="unitsconsumed" type="xs:units"/>
+</xs:sequence>
+</xs:complextype>
+</xs:element>
+</xs:schema>
