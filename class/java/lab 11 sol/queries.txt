@@ -1,0 +1,41 @@
+CREATE TABLE mobiles (mobileid NUMBER PRIMARY KEY, name VARCHAR2 (20), price NUMBER(10,2),quantity VARCHAR2(20));
+
+INSERT INTO mobiles VALUES(1001,’Nokia Lumia 520’,8000,20);
+INSERT INTO mobiles VALUES(1002,’Samsung Galaxy IV’,38000,40);
+INSERT INTO mobiles VALUES(1003,’Sony xperia C’,15000,30);
+
+CREATE TABLE purchasedetails(purchaseid NUMBER, cname vARCHAR2(20), mailid VARCHAR2(30),phoneno VARCHAR2(20), purchasedate DATE, mobileid references mobiles(mobileid));
+
+create sequence pid_seq start with 101 increment by 1;
+
+select pid_seq.nextval from dual;
+
+******************************************************************
+
+project--->MobileApp
+
+packages---->
+com.cg.mobile.bean
+com.cg.mobile.ui
+com.cg.mobile.service
+com.cg.mobile.dao
+
+bean--->
+Customer(class)
+Mobile(class)
+	//getters and setters for both table columns
+
+dao---->
+IMobileDao(interface)	//create methods
+MobileDaoImpl(class)	//implements interface	//override methods
+
+service--->
+IMobileService(interface)	//create methods
+MobileServiceImpl(class)	//implements interface	//override methods
+
+//service layer calls dao through object ref
+
+UI----->
+MobileUI(class having main method)
+
+//ui layer calls service through object ref
