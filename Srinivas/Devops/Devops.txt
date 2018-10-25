@@ -1,0 +1,62 @@
+Maven Jenkins Sonar
+======================
+pre-req:
+--------
+jdk 1.8
+jenkins.war
+sonar5.x version
+maven 3.x version
+Eclipse luna or mars/eclipse Sts
+
+//jenkins.io-->download-->Generic java package(war)**
+//sonarqube-->download-->show all versions(5.6)_download **
+place all in same folder
+
+-------------------------
+DEVOPS:
+1) its a culture
+2)development team tasks+operations team tasks; that final product is devops. 
+person who is going to work is known as devops engineer(he should be good in python scripting).
+
+For deployment: Aws codedeploy services.
+
+Config management: Puppet and chef//any certification is valuable
+
+Containerization: kubernates, Dockers/Docker swarm
+App Monotoring:App Dynamics,PCF(New realiac service)...
+
+Nightly Build: we can build only one build in a day.
+
+Now in market, everything is agile/scrum methodologies(multiple builds in a day).
+------------------------
+
+CT automation: Jenkins server
+
+Jenkins power is in plugins.
+
+code==> eclopse->git->sonarqube->jenkins->output
+
+Devops=CI+Continuous delicery+continuous code quality testing+continuous deployment.
+
+SonarQube (opensource/commercial) had given some options to define your own rules using "sonar java api".
+
+=============================================
+
+Ant>Maven>Gradle
+
+Maven:
+>Maven is a build tool.
+>used for scaffolding.(process of creating project surface structure)
+>Dependancy management.(all vendor jars)
+>profiling.
+>Repo management.
+>transitive dependency.(if 1 dependency is dependant on other dependency)
+
+Ex:junit==>jar files are downloaded and added to build paths manually.
+
+>Maven can download dependencies for you automatically.
+
+>maven comes in 3 flavours: maven1/maven2/maven3 versions.(current is 3)
+
+=============
+Eclipse>new>others>maven
