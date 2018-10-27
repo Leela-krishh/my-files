@@ -1,0 +1,47 @@
+ select *from doctors_table;
+
+NAME                 SPECALIZATION
+-------------------- --------------------
+pavan                heart
+siva                 ENT
+singh                gynic
+
+SQL> commit;
+
+Commit complete.
+
+SQL> desc patients_table;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER
+ NAME                                               VARCHAR2(20)
+ MOBILENO                                           NUMBER
+ DOCTOR_NAME                                        VARCHAR2(20)
+ PROBLEM                                            VARCHAR2(20)
+ APP_DATE                                           DATE
+
+SQL> create sequence patient_sequence start with 1000;
+
+Sequence created.
+
+SQL> select *from patients_table;
+
+        ID NAME                   MOBILENO DOCTOR_NAME
+---------- -------------------- ---------- --------------------
+PROBLEM              APP_DATE
+-------------------- ---------
+      1000 Ramesh               9090909090 siva
+ENT                  28-OCT-18
+
+
+SQL> select *from patients_table;
+
+        ID NAME                   MOBILENO DOCTOR_NAME
+---------- -------------------- ---------- --------------------
+PROBLEM              APP_DATE
+-------------------- ---------
+      1000 Ramesh               9090909090 siva
+ENT                  28-OCT-18
+
+      1001 Ravikumar            9.0909E+10 siva
+ENT                  28-OCT-18

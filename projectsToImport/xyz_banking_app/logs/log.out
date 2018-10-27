@@ -1,0 +1,4 @@
+0 [main] ERROR com.cg.bank.dao.DemandDraftDAO  - ORA-28000: the account is locked
+
+2 [main] ERROR com.cg.bank.dao.DemandDraftDAO  - Couldn't connect with the database
+0 [main] INFO com.cg.bank.dao.DemandDraftDAO  - Added one row to the database
