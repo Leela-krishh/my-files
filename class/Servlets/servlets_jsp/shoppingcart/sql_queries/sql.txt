@@ -1,0 +1,3 @@
+create table user_details(username varchar2(30), password varchar2(30), 
+mail varchar2(30), mobile varchar2(10));
+
