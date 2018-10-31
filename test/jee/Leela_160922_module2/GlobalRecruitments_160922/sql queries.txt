@@ -1,0 +1,8 @@
+Enquiry details table
+=====================
+create table enquiry(enquryId number primary key, firstName varchar2(20),
+lastName varchar2(20), contactNo number(10), domain varchar2(20), city varchar2(20));
+
+Sequence Script
+===============
+create sequence enquiries MinValue 1001 MaxValue 9999 Start With 1001 Increment by 1 NoCache;

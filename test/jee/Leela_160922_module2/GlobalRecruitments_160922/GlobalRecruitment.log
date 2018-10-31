@@ -1,0 +1,88 @@
+2018-10-29 11:00:01,930 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:00:01,930 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:00:09,277 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:00:09,277 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:00:43,415 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:00:44,110 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:04:41,331 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:04:41,332 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:05:34,411 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:05:34,411 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:06:04,007 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:06:04,636 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:08:37,722 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:08:37,723 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:09:31,383 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:09:32,023 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:11:01,207 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:11:01,248 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+2018-10-29 11:12:01,803 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:12:38,187 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:12:38,782 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:14:28,764 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:14:28,765 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:15:09,479 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:15:10,179 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:22:44,333 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:22:44,941 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:23:22,684 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:23:23,262 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:23:29,990 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:23:29,990 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:25:56,226 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:25:56,226 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:26:07,343 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:26:07,966 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+2018-10-29 11:26:21,154 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:26:21,154 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:26:38,295 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:26:38,939 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:32:16,111 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:32:16,748 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:32:42,255 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:32:42,302 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:33:40,039 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:33:40,083 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 11:35:25,678 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:35:25,678 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:36:34,183 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:36:34,835 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 11:40:35,634 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:40:35,634 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:43:52,245 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:43:52,245 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:44:31,800 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:44:32,430 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:50:15,857 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:50:15,858 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:50:39,063 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:50:39,688 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:54:32,276 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:54:32,276 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:54:40,071 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:54:40,710 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 11:55:30,607 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in add patientDeatils  method
+2018-10-29 11:55:30,657 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - statement not created
+2018-10-29 11:59:10,322 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 11:59:10,323 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 11:59:14,303 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 11:59:14,998 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 12:00:40,635 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 12:00:40,635 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 12:00:51,114 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 12:00:51,114 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 12:00:54,114 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 12:00:54,771 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 12:00:59,999 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 12:01:00,038 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
+2018-10-29 12:05:29,287 - com.capgemini.contactbook.ui.Client - INFO - log4j got loaded..
+2018-10-29 12:05:29,288 - com.capgemini.contactbook.ui.Client - INFO - inside the main method
+2018-10-29 12:07:12,127 - com.capgemini.contactbook.dao.ContactBookDaoImpl - INFO - in getting enquiryDetails  mehtod
+2018-10-29 12:07:12,765 - com.capgemini.contactbook.dao.ContactBookDaoImpl - ERROR - in enquiryDetails method exception is: ORA-00904: "ENQRYID": invalid identifier
+
