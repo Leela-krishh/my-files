@@ -1,0 +1,60 @@
+jsp tags
+========
+1.Scriptlet
+-----------
+<% %>
+
+2.expression
+------------
+<%= %>
+
+3.directive
+-----------
+page directive
+<%@ page %>
+
+tag lib directive
+<%@ taglib %>
+
+include directive
+<%@ include %>
+
+4.declarative
+-------------
+<%! %>
+
+jsp life cycle methods
+======================
+jspInit();
+_jspService();
+jspDestroy();
+
+JSTL(Jsp Standard Tag Library)
+====
+core tags
+sql tags
+xml tags
+formatting tags
+Function tags
+
+==>
+generic servlet is the class of javax.servlet;
+http servlet and cookies are classes from javax.servlet.http;
+rest all are interfaces.
+
+implicit objects
+================
+out request response session application pase paseContext config exception
+
+JSP Action Tags
+===============
+-->includes the response of another tag
+
+jsp:include
+jsp:forward
+jsp:usebean
+jsp:setProperty
+jsp:getProperty
+jsp:param
+jsp:plugin
+jsp:fallback
