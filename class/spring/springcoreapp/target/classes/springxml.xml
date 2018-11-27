@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+        
+        <context:annotation-config></context:annotation-config>
+        <bean id="emp" class="com.cg.spring.core.Employee" init-method="init" destroy-method="destroyBean">
+       <!-- constructor type injection -->
+        <constructor-arg name="id" value="123"></constructor-arg>
+        <constructor-arg name="name" value="leela"></constructor-arg>
+        <constructor-arg name="salary" value="100000"></constructor-arg>
+        </bean>
+        
+       <!-- setter type injection -->
+        <bean id="mgr" class="com.cg.spring.core.Manager">
+        <property name="deptno" value="1123"></property>
+        <property name="projectName" value="cocacola"></property>
+        <property name="projectCode" value="1234567890"></property>
+        </bean>
+        
+        <bean id="c" class="com.cg.spring.core.beans.Customer" >
+        <property name="firstName" value="leela"></property>
+        <property name="lastName" value="krishh"></property>
+        <property name="list">
+        <list>
+        <ref bean="addr"></ref>
+        <ref bean="addr1"></ref>
+        </list>
+        </property>
+      
+        
+       <!--  <property name="addr" ref="a"></property> -->
+        </bean>
+        
+        <bean id="addr" class="com.cg.spring.core.beans.Address">
+        <constructor-arg name="city" value="Kadapa"></constructor-arg>
+        <constructor-arg name="state" value="Rayalaseema"></constructor-arg>
+        </bean>
+        
+         <bean id="addr1" class="com.cg.spring.core.beans.Address">
+        <constructor-arg name="city" value="proddatur"></constructor-arg>
+        <constructor-arg name="state" value="kadapa"></constructor-arg>
+        </bean>
+        
+</beans>
