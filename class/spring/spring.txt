@@ -1,0 +1,88 @@
+Core IOC
+Spring MVC
+Spring ADBC API
+Spring AOP
+Spring EJB
+Spring Data
+Spring Rest
+Spring Boot
+==============================
+Core IOC(Inversion of Control)
+==============================
+Has a container named spring core container/IOC container.
+--Dependencies are injected whenever needed. Objects are the dependencies.
+--Loosely coupled
+S1: Bean class definition.
+S2: configuration file beans declaration.
+S3: injecting dependencies.
+--Provides a standalone execution environment.
+
+>>>Spring is used:
+To build light weight applications.
+To build diff modules like spring data, spring boot, jdbc api, spring core.
+
+>>scope of bean class
+=====================
+1.singleton(default)
+2.prototype
+3.session
+4.request
+5.application
+
+3,4,5 works only in a dynamic web application.
+
+>>we can set data for a bean using constructor type injection or setter type injection instead of using class.
+
+Spring container life cycle
+===========================
+1: implementing life cycle interfaces and overriding afterPropertiesSet() and destroy()
+2: using annotations 
+	@PostConstruct
+	@PreDestroy
+3: using attributes of bean in xml
+	init-method
+	destroy-method
+
+>>init method():
+initializing app data we go for init method.
+>>destroy():
+clean up operations before coming out from application.
+
+Auto-wiring:
+============
+Assigning/wiring properties of the bean automatically.
+<bean .......... autowire="default (or) no/byName/byType/constructor"></bean>
+
+default = no wiring.
+byName works iff property name and bean id name are same.
+byType reference is just checked.
+
+collection mapping to a bean:
+=============================
+list
+set
+map
+
+@autowired annotation:
+	using at setter and getter, byType.
+	using at predefined data types, byName.
+	using at user defined data types, byType.
+	using at constructor, constructor.
+
+==========
+Spring MVC
+==========
+M:
+@Service: To define service layer.
+@Repository: To define dao layer.
+
+C:
+@Controller:
+	To define controller layer in aplcn.
+	Dispatcher servlet maps requests to service method.
+
+V:
+No annotations, only jsp pages.
+
+>>Dependancies to work with springMVC module:
+Dynamic web application, we use Spring-web / spring-webmvc.
