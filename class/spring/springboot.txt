@@ -1,0 +1,12 @@
+spring boot application
+=======================
+created using:
+1.spring starter project
+2.spring boot CLI(command line interface)
+3.spring IO
+4.maven and adding springboot dependancies
+
+>>Spring IO
+===========
+using spring io and importing project, if it shows main class not loaded, change the port number like
+>>src/main/resources>>application.properties>>"server.port=----">>save

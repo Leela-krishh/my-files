@@ -1,0 +1,32 @@
+Spring Data
+===========
+dependencies>>
+spring-data-jpa, mysql, web, parent, etc...
+
+Annotations>>
+@SequenceGenerator
+@TableGenerator
+@Id
+@Entity
+@Table
+@Inheritance
+@Embedable
+@OneToOne
+@ManyToMany
+@OneToMany
+@NamedQuery
+@Column
+
+Database Queries>>
+==================
+create database db_name;
+use db_name
+
+application.properties>>
+------------------------
+server.port=9091
+spring.datasource.username=
+spring.datasource.password=
+spring.datasource.url=jdbc:mysql://localhost:3306/db_name
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
