@@ -1,0 +1,78 @@
+<!-- <app-productlist></app-productlist>
+<app-employeelist></app-employeelist> -->
+
+<input type="number" min="0" max="{{total}}" [(ngModel)]="tickets">
+<button (click)="booked()">submit</button>
+<b>Total Price:</b>
+{{tickets*150}}
+<br><br>
+<input type="number" [(ngModel)]="x">
+<input type="number" [(ngModel)]="y">
+<button (click)="add()">ADD</button>
+<button (click)="sub()">SUB</button>
+<b>result:</b>{{result}}
+<br><br>
+<input type="text" [(ngModel)]="element">
+<button (click)="insert()">Add</button>
+<ul>
+    <li *ngFor="let a of array; let i=index">{{a}}
+        <button (click)="remove(i)">Remove</button>
+    </li>
+</ul>
+<br>
+<select [(ngModel)]="lang">
+    <option value="java">Java</option>
+    <option value="react">React</option>
+    <option value="pega">Pega</option>
+</select>
+
+<div [(ngSwitch)]="lang">
+    <div *ngSwitchCase="'java'">Java is a OOPL</div>
+    <div *ngSwitchCase="'react'">React is a library</div>
+    <div *ngSwitchCase="'pega'">Pega is a ....</div>
+    <div *ngSwitchCaseDefault>Please choose Languages</div>
+</div>
+<br>
+    <select [(ngModel)]="state">
+        <option value="Telangana">Telangana</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+    </select>
+    <div [(ngSwitch)]="state">
+        <div *ngSwitchCase="'Telangana'">
+            <select>
+                <option *ngFor="let tc of Tcities">{{tc.n}}</option>
+            </select>
+        </div>
+        <div *ngSwitchCase="'Andhra Pradesh'">
+            <select>
+                <option *ngFor="let ac of Acities">{{ac.n}}</option>
+            </select>
+        </div>
+        <div *ngSwitchCaseDefault>Please choose State</div>
+    </div>
+    <div [style.color]="'red'" id="container">
+        Draw a box
+    </div>
+    <div [ngStyle]="{color:'green', 'background-color':'yellow'}">
+        drawing a box using ng style
+    </div>
+    <div [ngClass]="{bordered: isBordered}" (click)="setBorder()">
+        drawing a box using ng class by toggling border
+    </div>
+    <hr>
+    <b>Lower case pipe:</b>
+    {{'CAPGEMINI' | lowercase}}<br>
+    <b>Upper case pipe:</b>
+    {{'capgemini' | uppercase}}<br>
+    <b>Currency:</b>
+    {{1234.56 | currency:'USD'}}
+    {{1234.56 | currency:'INR'}}<br>
+    <b>Number:</b>
+    {{4200.156 | number:'4.1-3'}}<br>
+    <b>Percent:</b>
+    {{.25 | percent}}<br>
+    <b>Slice:</b>
+    (1){{['a','e','i','o','u'] | slice:1:3}}
+    (2){{['a','e','i','o','u'] | slice:2}}<br>
+    <b>Date:</b>
+    {{d | date:'EEEE dd-MM-yyyy'}}

@@ -1,0 +1,21 @@
+<b [style.color]="'green'">{{status}}</b>
+<div *ngIf="product_info">
+  <table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let p of product_info">
+    <td>{{p.name}}</td>
+    <td>{{p.model}}</td>
+    <td>{{p.price}}</td>
+  </tr>
+</table>
+</div>
+<button (click)="getAllProducts()">Show all Products</button><br>
+<button (click)="addProduct()">Add</button><br>
+<button (click)="updateProduct()">Update</button><br>
+<button (click)="deleteProduct()">Delete</button>

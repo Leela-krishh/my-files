@@ -1,0 +1,5 @@
+progress{
+    -moz-appearence: progressbar;
+    width: 10px;
+    height: 5px;
+}

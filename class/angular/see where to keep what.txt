@@ -1,0 +1,11 @@
+-->"my-ng-app%src" ante "my-ng-app" project lo, 
+"src" folder lo, already unna "app" folder delete chesi, 
+ee folder lopala unna "app" folder paste cheyamani..
+
+visual studio code download link (.zip file download cheskovali):
+""https://code.visualstudio.com/download""
+
+node js download link (.zip file download cheskovali):
+""https://nodejs.org/en/download/current/""
+
+duyyooo saidul...

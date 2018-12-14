@@ -1,0 +1,7 @@
+<div *ngIf="productInfo">
+    <b>Id:</b>{{productInfo.id}}<br>
+    <b>Name:</b>{{productInfo.name}}<br>
+    <b>Model:</b>{{productInfo.model}}<br>
+    <b>price:</b>{{productInfo.price}}<br>
+    <b>Votes:</b><a href="#" (click)="vote(productInfo)">{{productInfo.votes}}</a><br>
+</div>

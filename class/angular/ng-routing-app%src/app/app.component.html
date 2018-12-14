@@ -1,0 +1,13 @@
+<section class="main">
+  <header class="header">
+    <a routerLink="/home" (click)="setPageTitle('home')">Home</a>
+    <a routerLink="/about" (click)="setPageTitle('about')">About</a>
+    <a routerLink="/contact" (click)="setPageTitle('contact')">Contact</a>
+    <a routerLink="/login" (click)="setPageTitle('login')">Login</a>
+  </header>
+  <section class="content">
+    <section class="content-left"><router-outlet></router-outlet></section>
+    <section class="content-right"></section>
+  </section>
+  <footer class="footer"></footer>
+</section>

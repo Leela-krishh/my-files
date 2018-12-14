@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let e of employees">
+    <a href="#" (click)="selectedEmployee(e)">{{e.name}}</a>
+  </li>
+</ul>
+<app-employee [employeeInfo]="employee"></app-employee>

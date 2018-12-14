@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let pro of products">
+    <a href="#" (click)="selectedProduct(pro)">{{pro.name}}</a>
+  </li>
+</ul>
+<app-product [productInfo]="product"></app-product>

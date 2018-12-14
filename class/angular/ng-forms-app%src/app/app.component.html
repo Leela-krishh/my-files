@@ -1,0 +1,74 @@
+<!-- <form [formGroup]="myForm">
+  <label for="firstname">First Name:</label><br>
+  <input type="text" formControlName="firstname"/><br>
+  <div *ngFor="let f of error_messages.firstname">
+    <div *ngIf="myForm.get('firstname').hasError(f.type) 
+        && (myForm.get('firstname').touched || myForm.get('firstname').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{f.message}}</b>
+    </div>
+  </div>
+  <label for="lastname">Last Name:</label><br>
+  <input type="text" formControlName="lastname"/><br>
+  <div *ngFor="let l of error_messages.lastname">
+    <div *ngIf="myForm.get('lastname').hasError(l.type)
+        && (myForm.get('lastname').touched || myForm.get('lastname').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+    </div>
+  </div>
+  <label for="email">Email:</label><br>
+  <input type="text" formControlName="email"/><br>
+  <div *ngFor="let l of error_messages.email">
+    <div *ngIf="myForm.get('email').hasError(l.type)
+        && (myForm.get('email').touched || myForm.get('email').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+      </div>
+  </div>
+  <label for="contact">Contact:</label><br>
+  <input type="text" formControlName="contact"/><br>
+  <div *ngFor="let l of error_messages.contact">
+    <div *ngIf="myForm.get('contact').hasError(l.type)
+        && (myForm.get('contact').touched || myForm.get('contact').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+      </div>
+  </div><br>
+  <label for="gender">Gender:</label><br>
+  <input type="radio" name="gender" value="male" forControlName="gender"/>Male
+  <input type="radio" name="gender" value="female" forControlName="gender"/>Female
+  <div *ngFor="let l of error_messages.gender">
+    <div *ngIf="myForm.get('gender').hasError(l.type)
+        && (myForm.get('gender').touched || myForm.get('gender').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+      </div>
+  </div><br>
+  <label for="language">Languages:</label><br>
+  <input type="checkbox" name="language" forControlName="language"/>English
+  <input type="checkbox" name="language" forControlName="language"/>Telugu
+  <input type="checkbox" name="language" forControlName="language"/>Hindi
+  <div *ngFor="let l of error_messages.contact">
+    <div *ngIf="myForm.get('language').hasError(l.type)
+        && (myForm.get('language').touched || myForm.get('language').dirty)">
+     <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+      </div>
+  </div><br>
+  <div formGroupName="address">
+    <label for="city">City:</label><br>
+    <input type="text" formControlName="city"/>
+    <div *ngFor="let l of error_messages.city">
+      <div *ngIf="myForm.get('address').get('city').hasError(l.type)
+      && (myForm.get('address').get('city').touched || myForm.get('address').get('city').dirty)">
+   <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+    </div>
+    </div>
+    <label for="state">State:</label><br>
+    <input type="text" formControlName="state"/>
+    <div *ngFor="let l of error_messages.state">
+      <div *ngIf="myForm.get('address').get('state').hasError(l.type)
+      && (myForm.get('address').get('state').touched || myForm.get('address').get('state').dirty)">
+   <b [ngStyle]="{color:'red'}">*{{l.message}}</b>
+    </div>
+    </div>
+  </div>
+  <button type="submit" [disabled]=!myForm.valid>Submit</button>
+</form> -->
+
+<app-product></app-product>

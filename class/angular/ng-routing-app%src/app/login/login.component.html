@@ -1,0 +1,46 @@
+<select [(ngModel)]="act">
+  <option value="user">User</option>
+  <option value="admin">Admin</option>
+  <option value="customer">Customer</option>
+</select>
+<div [ngSwitch]="act">
+<p *ngSwitchCase="'user'">
+user login page
+</p>
+<p *ngSwitchCase="'admin'">
+admin login page
+</p>
+<p *ngSwitchCase="'customer'">
+  customer login page
+  </p>
+</div><br>
+<a routerLink ="/contact">Click</a> Contact<br><br>
+<form>
+  <table style="text-align:center">
+  <tr><td>Username:</td><td><input type="text" style="text-transform:uppercase" id="uname" /></td></tr>
+  <tr><td>Password:</td><td><input type="password" id="password" name="pass" [(ngModel)]="pass" /></td>
+    <td>
+      <div *ngIf="pass.length<1">
+          <b [ngStyle]="{color:'red'}">*required</b>
+       </div> 
+      <div *ngIf="pass.length>1 && pass.length<4">
+        <b [ngStyle]="{color:'maroon'}">Weak</b>
+        <progress value="100" max="100" style="background-color:rgb(168, 49, 49)"></progress>
+        <progress value="0" max="100"></progress>
+        <progress value="0" max="100"></progress></div>
+    <div *ngIf="pass.length>=4 && pass.length<8">
+        <b [ngStyle]="{color:'green'}">Average</b>
+        <progress value="100" max="100" style="background-color:rgb(168, 49, 49)"></progress>
+        <progress value="100" max="100"></progress>
+        <progress value="0" max="100"></progress>
+     </div>
+     <div *ngIf="pass.length>=8">
+        <b [ngStyle]="{color:'blue'}">Strong</b>
+        <progress value="100" max="100" style="background-color:rgb(168, 49, 49)"></progress>
+        <progress value="100" max="100"></progress>
+        <progress value="100" max="100"></progress>
+     </div> 
+      </td></tr>
+  <tr><td colspan="2"><button id="login" value="submit" (click)="login()">Login</button></td></tr>
+</table>
+</form>

@@ -1,0 +1,25 @@
+Number of options per page:
+<select [(ngModel)]="num">
+  <option value="2">2</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+</select><br><br>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Model</th>
+      <td>Price</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products | paginate:{itemsPerPage:num, currentPage:p}">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.model}}</td>
+      <td>{{p.price}}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>

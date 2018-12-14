@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "one plus",
+      "model": "6s",
+      "price": 24999,
+      "id": 2
+    },
+    {
+      "name": "android",
+      "model": "g2",
+      "price": 12999,
+      "id": 4
+    },
+    {
+      "name": "android",
+      "model": "g2",
+      "price": 12999,
+      "id": 5
+    }
+  ]
+}
